@@ -1,0 +1,42 @@
+html, body{
+  height: 100%;
+  background: #F4FAFA;
+}
+button.active{
+  background: #fff;
+  color: #009688;
+}
+button.active:hover{
+  color: #fff;
+}
+.md-button-wrapper > .material-icons {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.fill{
+  flex: 1 1 auto;
+}
+.app-state{
+  margin: 15px;
+  flex: 1;
+}
+.home{
+  flex: 1;
+}
+md-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  flex: 0 0 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
