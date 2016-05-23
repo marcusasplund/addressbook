@@ -17,7 +17,7 @@ Once you have those, you should install these globals with `npm install --global
 * `npm install typings webpack-dev-server rimraf webpack -g` to install required global dependencies
 * `npm install` to install all dependencies
 * `typings install` to install necessary typings
-* `npm start` to start the dev server in another tab
+* `npm start` to start the dev server in another tab and open up http://localhost:3000/ in a browser
 
 ## Running the app
 After you have installed all dependencies you can now run the app. Run `npm run server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://0.0.0.0:3000` (or if you prefer IPv6, if you're using `express` server, then it's `http://[::1]:3000/`).
