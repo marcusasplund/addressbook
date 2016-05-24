@@ -2,7 +2,7 @@
   "name": "ng2 addressbook",
   "version": "0.0.1",
   "description": "Demo of how to solve the task of making an addressbook with local storage capability",
-  "author": "Marcus Asplund <patrick@angularclass.com>",
+  "author": "Marcus Asplund <marcus@greatname.se>",
   "homepage": "https://github.com/marcusasplund/addressbook/",
   "license": "MIT",
   "scripts": {
