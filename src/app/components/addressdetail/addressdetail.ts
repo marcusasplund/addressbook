@@ -65,7 +65,7 @@ export class AddressDetail {
   
   ngOnInit() {
     this.countryservice.getAll().subscribe(res => {
-      this.countries = res
+      this.countries = res;
     });
     this.order = this.fb.group({
       firstName: [this.selectedAddress.firstName || '', Validators.required],
