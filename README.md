@@ -3,8 +3,11 @@
 
 ##Known bugs 2016-05-24
 Affects all browsers:
+
 [Initial select value is not set in edit view, ng2-issue](https://github.com/angular/angular/issues/8549)
+
 Affects IE11
+
 [Inputs does not work in IE11, ng2-material bug, fixed in next release](https://github.com/angular/material2/pull/469)
 
 ## Dependencies
