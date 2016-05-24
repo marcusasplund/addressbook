@@ -15,9 +15,6 @@ export interface AppStore {
   selectedAddress: Address;
 }
 
-//-------------------------------------------------------------------
-// ITEMS STORE
-//-------------------------------------------------------------------
 export const addresses = (state: any = [], {type, payload}) => {
   switch (type) {
     case 'ADD_ADDRESSS':
@@ -37,10 +34,7 @@ export const addresses = (state: any = [], {type, payload}) => {
   }
 };
 
-//-------------------------------------------------------------------
-// SELECTED ITEM STORE
-//-------------------------------------------------------------------
-export const selectedAddress = (state: any = null, {type, payload}) => {
+export const selectedAddress = (state: any = undefined, {type, payload}) => {
   switch (type) {
     case 'SELECT_ADDRESS':
       return payload;
@@ -49,20 +43,18 @@ export const selectedAddress = (state: any = null, {type, payload}) => {
   }
 };
 
-export const SEARCH = 'SEARCH'
+export const SEARCH = 'SEARCH';
 
 export const visibilityFilter = (state = (address) => true, {type, payload}) => {
-  switch(type){
+  switch (type) {
     case SEARCH:
       // search performed on first and last name. Can be extended
       return (address) => address.firstName.indexOf(payload) !== -1 || address.lastName.indexOf(payload) !== -1;
     default:
       return state;
   }
-}
-//-------------------------------------------------------------------
-// ITEMS SERVICE
-//-------------------------------------------------------------------
+};
+
 @Injectable()
 export class AddressService {
   addresses: Observable<Array<Address>>;
@@ -78,7 +70,7 @@ export class AddressService {
 
   setAllLocalAddresses(payload) {
     localStorage.setItem('ng2addressBook', JSON.stringify(payload));
-    console.log(this.getAllLocalAddresses())
+    console.log(this.getAllLocalAddresses()); 
   }
 
   createSingleLocalAddress(payload) {
@@ -110,7 +102,7 @@ export class AddressService {
   }
 
   loadAddresses() {
-    let payload = this.getAllLocalAddresses()
+    let payload = this.getAllLocalAddresses();
     this.store.dispatch({ type: 'ADD_ADDRESSS', payload });
   }
 
@@ -125,15 +117,15 @@ export class AddressService {
   }
 
   updateAddress(address: Address) {
-    this.updateSingleLocalAddress(address)
+    this.updateSingleLocalAddress(address);
     this.store.dispatch({ type: 'UPDATE_ADDRESS', payload: address });
   }
 
   deleteAddress(address: Address) {
-    this.deleteSingleLocalAddress(address.id)
+    this.deleteSingleLocalAddress(address.id);
     this.store.dispatch({ type: 'DELETE_ADDRESS', payload: address });
   }
-  // NOTE: Utility functions to simulate server generated IDs
+  // Utility functions to simulate server generated IDs
   private addUUID(address: Address): Address {
     return Object.assign({}, address, {id: this.generateUUID()}); // Avoiding state mutation FTW!
   }
