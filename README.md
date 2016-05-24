@@ -10,6 +10,11 @@ Affects IE11
 
 [Inputs does not work in IE11, ng2-material bug, fixed in next release](https://github.com/angular/material2/pull/469)
 
+##TODO
+test coverage
+
+documentation
+
 ## Dependencies
 * `node` and `npm` (`brew install node`)
 * Ensure you're running the latest versions Node `v4.x.x`+ (or `v5.x.x`) and NPM `3.x.x`+
