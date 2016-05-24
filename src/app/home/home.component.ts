@@ -61,7 +61,7 @@ export class Home {
   constructor(private router: Router, private addressService: AddressService, private store: Store<AppStore>) {
     this.selectedAddress = store.select('selectedAddress');
     this.addresses = store.select('addresses')
-      .combineLatest(store.select('visibilityFilter'), (addresses, visibilityFilter) => {
+      .combineLatest(store.select('visibilityFilter'), (addresses: any, visibilityFilter: any) => {
         return addresses.filter(visibilityFilter)
       });
     this.addressService.loadAddresses();
