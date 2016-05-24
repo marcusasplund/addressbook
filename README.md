@@ -17,6 +17,7 @@ Once you have those, you should install these globals with `npm install --global
 * `npm install typings webpack-dev-server rimraf webpack -g` to install required global dependencies
 * `npm install` to install all dependencies
 * `typings install` to install necessary typings
+* HEADS UP! If you are behind a proxy, be sure to do `typings install --proxy http://<your-proxyurl>...`
 * `npm start` to start the dev server in another tab and open up http://localhost:3000/ in a browser
 
 ## Running the app
