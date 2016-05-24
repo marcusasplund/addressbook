@@ -13,7 +13,7 @@ Once you have those, you should install these globals with `npm install --global
 
 ## Installing
 
-* `git clone  https://github.com/marcusasplund/addressbook.git`
+* Download and unzip
 * `npm install typings webpack-dev-server rimraf webpack -g` to install required global dependencies
 * `npm install` to install all dependencies
 * `typings install` to install necessary typings
