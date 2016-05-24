@@ -57,7 +57,7 @@ export class AddressDetail {
   @Output() cancelled = new EventEmitter();
   @Input('address') set address(value: Address) {
     if (value) this.originalName = value.firstName + ' ' + value.lastName;
-	  this.selectedAddress = Object.assign({}, value);
+	    this.selectedAddress = Object.assign({}, value);
   }
   constructor(private fb: FormBuilder, private countryservice: CountryService) {
 
