@@ -15,7 +15,7 @@ import {Store} from '@ngrx/store';
   ],
   template: `
   <md-list>
-  <md-list-item class="hover" *ngFor="let address of addresses">
+  <md-list-item *ngFor="let address of addresses">
     <h4 md-line>{{address.firstName}} {{address.lastName}}</h4>
     <p md-line>{{address.email}}</p>
     <p md-line>{{address.country}}</p>
