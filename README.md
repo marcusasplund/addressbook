@@ -14,10 +14,7 @@ CRUD address book that use browsers `localStorage` for persistent storage.
 * Starter [Angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter)
 
 
-###Known bugs 2016-05-24
-Affects all browsers:
-
-[Initial select value is not set in edit view, ng2-issue](https://github.com/angular/angular/issues/8549)
+###Known bug 2016-05-24
 
 Affects IE11
 
