@@ -1,6 +1,13 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
-import {AddressService, Address, AppStore} from '../../addresses';
+import {
+  AddressService,
+  Address,
+  AppStore} from '../../addresses';
 import {AddressDetail} from '../components/addressdetail/';
 import {Store} from '@ngrx/store';
 
@@ -14,7 +21,8 @@ import {Store} from '@ngrx/store';
   template: `
   <md-content layout-padding>
     <address-detail
-      (saved)="saveAddress($event)" (cancelled)="resetAddress($event)"
+      (saved)="saveAddress($event)"
+      (cancelled)="resetAddress($event)"
       [address]="selectedAddress | async">Select an Address
       </address-detail>
   </md-content>
