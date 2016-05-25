@@ -1,6 +1,14 @@
-import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
-import {AddressService, Address, AppStore} from '../../addresses';
+import {
+  AddressService,
+  Address,
+  AppStore} from '../../addresses';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 
@@ -89,11 +97,17 @@ export class Home {
       email: '',
       country: ''
     };
-    this.store.dispatch({type: 'SELECT_ADDRESS', payload: emptyAddress});
+    this.store.dispatch({
+      type: 'SELECT_ADDRESS',
+      payload: emptyAddress
+    });
   }
 
   selectAddress(address: Address) {
-    this.store.dispatch({type: 'SELECT_ADDRESS', payload: address});
+    this.store.dispatch({
+      type: 'SELECT_ADDRESS',
+      payload: address
+    });
     this.router.parent.navigate(['Edit']);
   }
 
