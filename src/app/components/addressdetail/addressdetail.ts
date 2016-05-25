@@ -16,39 +16,46 @@ import {Observable} from 'rxjs/Observable';
     CountryService
   ],
   template: `
-<md-card>
-  <h4 md-line *ngIf="selectedAddress.id">Editing
-    {{originalName}}</h4>
-  <h4 md-line *ngIf="!selectedAddress.id">Create New Address</h4>
-  <form novalidate (submit)="onSubmit($event)" [ngFormModel]="order">
-    <md-card-content>
-      <md-input
-        type="text"
-        [ngFormControl]="order.controls['firstName']"
-        [(ngModel)]="selectedAddress.firstName"
-        placeholder="First name"></md-input>
-      <md-input
-        type="text"
-        [ngFormControl]="order.controls['lastName']"
-        [(ngModel)]="selectedAddress.lastName"
-        placeholder="Last name"></md-input>
-      <md-input
-        type="text"
-        [ngFormControl]="order.controls['email']"
-        [(ngModel)]="selectedAddress.email"
-        placeholder="Email"></md-input>
-      <select [ngFormControl]="order.controls['country']" [(ngModel)]="selectedAddress.country">
-        <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
-      </select>
-    </md-card-content>
-    <md-card-actions>
-      <button md-raised-button type="submit" (click)="cancelled.emit(selectedAddress)">Reset</button>
-      <button md-raised-button color="primary" [disabled]="!order.valid" type="submit">Save
-        <md-icon class="material-icons">save</md-icon>
-      </button>
-    </md-card-actions>
-  </form>
-</md-card>
+  <md-card>
+    <h4 md-line *ngIf="selectedAddress.id">Editing
+      {{originalName}}</h4>
+    <h4 md-line *ngIf="!selectedAddress.id">Create New Address</h4>
+    <form novalidate (submit)="onSubmit($event)" [ngFormModel]="order">
+      <md-card-content layout="column">
+        <md-input
+          class="full-width"
+          type="text"
+          [ngFormControl]="order.controls['firstName']"
+          [(ngModel)]="selectedAddress.firstName"
+          placeholder="First name"></md-input>
+        <md-input
+          class="full-width"
+          type="text"
+          [ngFormControl]="order.controls['lastName']"
+          [(ngModel)]="selectedAddress.lastName"
+          placeholder="Last name"></md-input>
+        <md-input
+          class="full-width"
+          type="text"
+          [ngFormControl]="order.controls['email']"
+          [(ngModel)]="selectedAddress.email"
+          placeholder="Email"></md-input>
+        <label class="select-label">Country</label>
+        <select
+          class="md-input-element full-width"
+          [ngFormControl]="order.controls['country']"
+          [(ngModel)]="selectedAddress.country">
+            <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
+        </select>
+      </md-card-content>
+      <md-card-actions>
+        <button md-raised-button type="submit" (click)="cancelled.emit(selectedAddress)">Clear</button>
+        <button md-raised-button color="primary" [disabled]="!order.valid" type="submit">Save
+          <md-icon class="material-icons">save</md-icon>
+        </button>
+      </md-card-actions>
+    </form>
+  </md-card>
   `
 })
 export class AddressDetail {
@@ -63,6 +70,7 @@ export class AddressDetail {
     if (value) this.originalName = value.firstName + ' ' + value.lastName;
 	  this.selectedAddress = Object.assign({}, value);
   }
+
   constructor(private fb: FormBuilder, private countryservice: CountryService) {
     this.countryservice.getAll().subscribe(res => {
       this.countries = res;
