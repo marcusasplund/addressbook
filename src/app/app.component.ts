@@ -1,11 +1,17 @@
 /*
  * Angular 2 decorators and services
  */
-import { Component, ViewEncapsulation } from '@angular/core';
-import { RouteConfig, Router } from '@angular/router-deprecated';
+import {
+  Component,
+  ViewEncapsulation
+} from '@angular/core';
+import {
+  RouteConfig,
+  Router
+} from '@angular/router-deprecated';
 
-import { Home } from './home';
-import { RouterActive } from './router-active';
+import {Home} from './home';
+import {RouterActive} from './router-active';
 
 /*
  * App Component
@@ -13,8 +19,8 @@ import { RouterActive } from './router-active';
  */
 @Component({
   selector: 'app',
-  pipes: [ ],
-  providers: [ ],
+  pipes: [],
+  providers: [],
   directives: [ RouterActive ],
   encapsulation: ViewEncapsulation.None,
   styles: [
