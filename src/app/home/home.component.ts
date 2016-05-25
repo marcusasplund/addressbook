@@ -3,12 +3,14 @@ import {
   Input,
   Output,
   EventEmitter,
-  ChangeDetectionStrategy} from '@angular/core';
+  ChangeDetectionStrategy
+} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
 import {
   AddressService,
   Address,
-  AppStore} from '../../addresses';
+  AppStore
+} from '../../addresses';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 
