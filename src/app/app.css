@@ -20,6 +20,17 @@ md-card {
   padding-bottom: 5px;
   font-size: 75%;
 }
+select {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 2px;
+  text-transform: capitalize;
+}
+select:focus {
+  outline: none;
+  border-color: #009688;
+  border-width: 2px;
+}
 .full-width {
   width: 100%;
 }
