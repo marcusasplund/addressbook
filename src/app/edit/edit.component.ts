@@ -2,12 +2,14 @@ import {
   Component,
   Input,
   Output,
-  EventEmitter} from '@angular/core';
+  EventEmitter
+} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
 import {
   AddressService,
   Address,
-  AppStore} from '../../addresses';
+  AppStore
+} from '../../addresses';
 import {AddressDetail} from '../components/addressdetail/';
 import {Store} from '@ngrx/store';
 
