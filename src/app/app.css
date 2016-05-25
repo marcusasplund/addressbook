@@ -2,6 +2,26 @@ html, body{
   height: 100%;
   background: #F4FAFA;
 }
+md-card {
+  width: 500px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+[md-mini-fab].adjusted {
+  width: 50px;
+}
+.select-label {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 75%;
+}
+.full-width {
+  width: 100%;
+}
 button.active{
   background: #fff;
   color: #009688;
