@@ -71,7 +71,9 @@ export class AddressDetail {
 
   onSubmit(e) {
     e.preventDefault();
-    this.saved.emit(this.selectedAddress);
+    if (this.order.valid) {
+      this.saved.emit(this.selectedAddress);
+    }
   }
 
   emailValidator(control: Control) {
