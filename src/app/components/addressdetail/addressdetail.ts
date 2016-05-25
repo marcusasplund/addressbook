@@ -42,7 +42,7 @@ import {Observable} from 'rxjs/Observable';
       </select>
     </md-card-content>
     <md-card-actions>
-      <button md-raised-button type="submit" (click)="cancelled.emit(selectedAddress)">Cancel</button>
+      <button md-raised-button type="submit" (click)="cancelled.emit(selectedAddress)">Reset</button>
       <button md-raised-button color="primary" [disabled]="!order.valid" type="submit">Save
         <md-icon class="material-icons">save</md-icon>
       </button>
