@@ -1,5 +1,17 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {FORM_BINDINGS, FORM_DIRECTIVES, ControlGroup, FormBuilder, Validators, Control} from '@angular/common';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
+import {
+  FORM_BINDINGS,
+  FORM_DIRECTIVES,
+  ControlGroup,
+  FormBuilder,
+  Validators,
+  Control
+} from '@angular/common';
 import {CountryService} from '../../../services/country-service';
 import {AddressService, Address} from '../../../addresses';
 import {Observable} from 'rxjs/Observable';
