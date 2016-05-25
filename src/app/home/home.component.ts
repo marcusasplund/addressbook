@@ -15,14 +15,27 @@ import {Store} from '@ngrx/store';
   ],
   template: `
   <md-list>
-  <md-list-item *ngFor="let address of addresses">
-    <h4 md-line>{{address.firstName}} {{address.lastName}}</h4>
-    <p md-line>{{address.email}}</p>
-    <p md-line>{{address.country}}</p>
-      <button md-mini-fab color="primary" (click)="selected.emit(address)"><md-icon class="material-icons">edit</md-icon></button>
-      <button md-mini-fab color="warn" class="margin" color="accent" (click)="deleted.emit(address); $event.stopPropagation();"><md-icon class="material-icons">close</md-icon></button>
-  </md-list-item>
-</md-list>
+    <md-list-item *ngFor="let address of addresses">
+      <h4 md-line>{{address.firstName}}
+        {{address.lastName}}</h4>
+      <p md-line>{{address.email}}</p>
+      <p md-line>{{address.country}}</p>
+      <button
+        md-mini-fab
+        class="adjusted"
+        color="primary"
+        (click)="selected.emit(address)">
+        <md-icon class="material-icons">edit</md-icon>
+      </button>
+      <button
+        md-mini-fab
+        class="adjusted margin"
+        color="accent"
+        (click)="deleted.emit(address); $event.stopPropagation();">
+        <md-icon class="material-icons">close</md-icon>
+      </button>
+    </md-list-item>
+  </md-list>
   `
 })
 class AddressList {
@@ -41,11 +54,12 @@ class AddressList {
   <md-content layout-padding>
     <md-card layout-padding>
       <md-card-content>
-      <h3>Address list</h3>
-      <md-input type="text" #q (keyup)="searchAll(q.value)" placeholder="Filter"></md-input>
-      <address-list [addresses]="addresses | async"
-        (selected)="selectAddress($event)" (deleted)="deleteAddress($event)">
-      </address-list>
+        <h3>Address list</h3>
+        <md-input type="text" #q (keyup)="searchAll(q.value)" placeholder="Filter"></md-input>
+        <address-list
+          [addresses]="addresses | async"
+          (selected)="selectAddress($event)"
+          (deleted)="deleteAddress($event)"></address-list>
       </md-card-content>
     </md-card>
   </md-content>
