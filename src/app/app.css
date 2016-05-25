@@ -3,7 +3,8 @@ html, body{
   background: #F4FAFA;
 }
 md-card {
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   position: absolute;
   margin: auto;
   top: 0;
