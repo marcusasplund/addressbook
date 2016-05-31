@@ -19,6 +19,7 @@ CRUD address book that use browsers `localStorage` for persistent storage.
 ~~Affects IE11~~
 
 ~~[Inputs does not work in IE11, ng2-material bug, fixed in next release](https://github.com/angular/material2/pull/469)~~
+
 Bug fixed 2016-05-31, inputs now works correct also in IE11
 
 ##TODO
