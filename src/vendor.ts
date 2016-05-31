@@ -14,6 +14,7 @@ import '@angular/router-deprecated';
 // RxJS
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/combineLatest';
 
 // Angular 2 Material 2
 import '@angular2-material/button';
