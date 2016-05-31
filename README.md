@@ -14,11 +14,12 @@ CRUD address book that use browsers `localStorage` for persistent storage.
 * Starter [Angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter)
 
 
-###Known bug 2016-05-24
+###~~Known bug 2016-05-24~~
 
-Affects IE11
+~~Affects IE11~~
 
-[Inputs does not work in IE11, ng2-material bug, fixed in next release](https://github.com/angular/material2/pull/469)
+~~[Inputs does not work in IE11, ng2-material bug, fixed in next release](https://github.com/angular/material2/pull/469)~~
+Bug fixed 2016-05-31, inputs now works correct also in IE11
 
 ##TODO
 test coverage
