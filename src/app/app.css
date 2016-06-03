@@ -60,15 +60,3 @@ md-content{
   flex-direction: column;
   height: 100%;
 }
-footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right:0;
-  flex: 0 0 60px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-}
