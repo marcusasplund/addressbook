@@ -1,17 +1,11 @@
 /*
  * Angular 2 decorators and services
  */
-import {
-  Component,
-  ViewEncapsulation
-} from '@angular/core';
-import {
-  RouteConfig,
-  Router
-} from '@angular/router-deprecated';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { RouteConfig, Router } from '@angular/router-deprecated';
 
-import {Home} from './home';
-import {RouterActive} from './router-active';
+import { Home } from './home';
+import { RouterActive } from './router-active';
 
 /*
  * App Component
@@ -19,8 +13,8 @@ import {RouterActive} from './router-active';
  */
 @Component({
   selector: 'app',
-  pipes: [],
-  providers: [],
+  pipes: [ ],
+  providers: [ ],
   directives: [ RouterActive ],
   encapsulation: ViewEncapsulation.None,
   styles: [
@@ -30,21 +24,20 @@ import {RouterActive} from './router-active';
   template: `
   <md-content>
     <md-toolbar color="primary">
+      <a md-button [href]="url">
         <span>{{ name }}</span>
-        <span class="fill"></span>
-        <button md-button router-active [routerLink]=" ['Address list'] ">
-          Address list
-        </button>
-        <button md-button router-active [routerLink]=" ['Edit'] ">
-          Add/Edit
-        </button>
+      </a>
+      <span class="fill"></span>
+      <button md-button router-active [routerLink]=" ['Address list'] ">
+        Address list
+      </button>
+      <button md-button router-active [routerLink]=" ['Edit'] ">
+        Add/Edit
+      </button>
     </md-toolbar>
     <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading"></md-progress-bar>
     <router-outlet></router-outlet>
-    <footer>
-      <a md-button [href]="url">by: @marcusasplund</a>
-    </footer>
-    </md-content>
+  </md-content>
   `
 })
 @RouteConfig([
@@ -55,7 +48,7 @@ import {RouterActive} from './router-active';
 export class App {
   loading = false;
   name = 'ng2 Address book';
-  url = 'https://pap.as/'
+  url = 'https://github.com/marcusasplund/addressbook/'
 
   constructor() {}
 
