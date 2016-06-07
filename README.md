@@ -27,6 +27,8 @@ test coverage
 
 documentation
 
+clean up misc starter left overs
+
 ## Dependencies
 * `node` and `npm` (`brew install node`)
 * Ensure you're running the latest versions Node `v4.x.x`+ (or `v5.x.x`) and NPM `3.x.x`+
