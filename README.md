@@ -1,20 +1,20 @@
 
 [LINK TO DEMO](https://pap.as/addressbook/)
 
-###Features
+### Features
 CRUD address book that use browsers `localStorage` for persistent storage.
 * In "Add/Edit"-view the user can add new or edit old entries 
 * Submit button is disabled for invalid entry (rules: all fields are required, email must be valid)
 * In "Address List"-view, the user can filter (global search in last and first name), delete, and trigger edit of entry
 
-###Main libs used
+### Main libs used
 * Main framework [Angular2](https://angular.io/)
 * UI-components [Angular2 Material](https://material.angular.io/)
 * State management [ngrx-store](https://github.com/ngrx/store)
 * Starter [Angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter)
 
 
-###~~Known bug 2016-05-24~~
+### ~~Known bug 2016-05-24~~
 
 ~~Affects IE11~~
 
@@ -22,7 +22,7 @@ CRUD address book that use browsers `localStorage` for persistent storage.
 
 Bug fixed 2016-05-31, inputs now works correct also in IE11
 
-##TODO
+## TODO
 test coverage
 
 documentation
