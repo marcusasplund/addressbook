@@ -15,9 +15,9 @@ import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 
 
-//-------------------------------------------------------------------
-// address-list
-//-------------------------------------------------------------------
+  //-------------------------------------------------------------------
+  // address-list
+  //-------------------------------------------------------------------
 @Component({
   selector: 'address-list',
   styles: [
@@ -53,9 +53,9 @@ class AddressList {
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
 }
-//-------------------------------------------------------------------
-// MAIN COMPONENT
-//-------------------------------------------------------------------
+  //-------------------------------------------------------------------
+  // MAIN COMPONENT
+  //-------------------------------------------------------------------
 @Component({
   selector: 'home',
   providers: [],
@@ -80,13 +80,17 @@ class AddressList {
 export class Home {
 
   selectedAddress: any;
-  addresses : any;
+  addresses: any;
 
-  constructor(private router: Router, private addressService: AddressService, private store: Store<AppStore>) {
+  constructor(
+      private router: Router,
+      private addressService: AddressService,
+      private store: Store<AppStore>
+    ) {
     this.selectedAddress = store.select('selectedAddress');
     this.addresses = store.select('addresses')
       .combineLatest(store.select('visibilityFilter'), (addresses: any, visibilityFilter: any) => {
-        return addresses.filter(visibilityFilter)
+        return addresses.filter(visibilityFilter);
       });
     this.addressService.loadAddresses();
   }
