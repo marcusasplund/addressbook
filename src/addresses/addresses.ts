@@ -49,7 +49,8 @@ export const visibilityFilter = (state = (address) => true, {type, payload}) => 
   switch (type) {
     case SEARCH:
       // search performed on first and last name. Can be extended
-      return (address) => address.firstName.indexOf(payload) !== -1 || address.lastName.indexOf(payload) !== -1;
+      return (address) => address.firstName.indexOf(payload) !== -1 ||
+        address.lastName.indexOf(payload) !== -1;
     default:
       return state;
   }
@@ -70,7 +71,7 @@ export class AddressService {
 
   setAllLocalAddresses(payload) {
     localStorage.setItem('ng2addressBook', JSON.stringify(payload));
-    console.log(this.getAllLocalAddresses()); 
+    console.log(this.getAllLocalAddresses());
   }
 
   createSingleLocalAddress(payload) {
