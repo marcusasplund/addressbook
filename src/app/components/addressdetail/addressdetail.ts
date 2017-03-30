@@ -80,8 +80,10 @@ export class AddressDetail {
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
   @Input('address') set address(value: Address) {
-    if (value) this.originalName = value.firstName + ' ' + value.lastName;
+    if (value) {
+      this.originalName = value.firstName + ' ' + value.lastName;
 	    this.selectedAddress = Object.assign({}, value);
+    }
   }
 
   constructor(private fb: FormBuilder, private countryservice: CountryService) {
@@ -98,8 +100,8 @@ export class AddressDetail {
   }
 
   emailValidator(control: Control) {
-    const EMAIL_REGEXP = 
-          /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
+    const EMAIL_REGEXP =
+      /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
     if (!EMAIL_REGEXP.test(control.value)) {
       return {invalidEmail: true};
     }
