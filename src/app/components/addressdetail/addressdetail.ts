@@ -61,7 +61,8 @@ import {Observable} from 'rxjs/Observable';
         </select>
       </md-card-content>
       <md-card-actions>
-        <button md-raised-button type="submit" (click)="cancelled.emit(selectedAddress)">Clear</button>
+        <button md-raised-button type="submit" 
+          (click)="cancelled.emit(selectedAddress)">Clear</button>
         <button md-raised-button color="primary" [disabled]="!order.valid" type="submit">Save
           <md-icon class="material-icons">save</md-icon>
         </button>
@@ -80,7 +81,7 @@ export class AddressDetail {
   @Output() cancelled = new EventEmitter();
   @Input('address') set address(value: Address) {
     if (value) this.originalName = value.firstName + ' ' + value.lastName;
-	  this.selectedAddress = Object.assign({}, value);
+	    this.selectedAddress = Object.assign({}, value);
   }
 
   constructor(private fb: FormBuilder, private countryservice: CountryService) {
@@ -97,7 +98,8 @@ export class AddressDetail {
   }
 
   emailValidator(control: Control) {
-    const EMAIL_REGEXP = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
+    const EMAIL_REGEXP = 
+          /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
     if (!EMAIL_REGEXP.test(control.value)) {
       return {invalidEmail: true};
     }
@@ -108,10 +110,14 @@ export class AddressDetail {
       this.selectedAddress.country = 'Sweden';
     }
     this.order = this.fb.group({
-      firstName: [this.selectedAddress.firstName || '', Validators.required],
-      lastName: [this.selectedAddress.lastName || '', Validators.required],
-      email: [this.selectedAddress.email || '', Validators.compose([Validators.required, this.emailValidator])],
-      country: [this.selectedAddress.country || '', Validators.required]
+      firstName: [this.selectedAddress.firstName || '',
+                  Validators.required],
+      lastName: [this.selectedAddress.lastName || '',
+                 Validators.required],
+      email: [this.selectedAddress.email || '',
+              Validators.compose([Validators.required, this.emailValidator])],
+      country: [this.selectedAddress.country || '',
+                Validators.required]
     });
   }
 }
