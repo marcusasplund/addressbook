@@ -1,5 +1,7 @@
 
-[LINK TO DEMO](https://pap.as/addressbook/)
+
+[![Build status](https://travis-ci.org/marcusasplund/addressbook.svg?branch=master)](https://travis-ci.org/marcusasplund/addressbook)
+#[DEMO](https://pap.as/addressbook/)
 
 ### Features
 CRUD address book that use browsers `localStorage` for persistent storage.
