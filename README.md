@@ -1,6 +1,7 @@
 
 
 [![Build status](https://travis-ci.org/marcusasplund/addressbook.svg?branch=master)](https://travis-ci.org/marcusasplund/addressbook)
+[![dependencies](https://david-dm.org/marcusasplund/addressbook.svg)](https://david-dm.org/marcusasplund/addressbook)
 # [DEMO](https://pap.as/addressbook/)
 
 ### Features
