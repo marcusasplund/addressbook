@@ -13,9 +13,9 @@ import {
 import {AddressDetail} from '../components/addressdetail/';
 import {Store} from '@ngrx/store';
 
-//-------------------------------------------------------------------
-// MAIN COMPONENT
-//-------------------------------------------------------------------
+  //-------------------------------------------------------------------
+  // MAIN COMPONENT
+  //-------------------------------------------------------------------
 @Component({
   selector: 'edit',
   providers: [],
@@ -36,12 +36,16 @@ export class Edit {
 
   selectedAddress: any;
 
-  constructor(private router: Router, private addressService: AddressService, private store: Store<AppStore>) {
+  constructor(
+      private router: Router,
+      private addressService: AddressService,
+      private store: Store<AppStore>
+    ) {
     this.selectedAddress = store.select('selectedAddress');
   }
 
   ngOnInit() {
-    console.log('welcome to edit view')
+    console.log('welcome to edit view');
   }
 
   resetAddress() {
@@ -56,7 +60,7 @@ export class Edit {
   }
 
   saveAddress(address: Address) {
-    this.addressService.saveAddress(address)
+    this.addressService.saveAddress(address);
     this.resetAddress();
     this.router.parent.navigate(['Address list']);
   }
