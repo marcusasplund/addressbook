@@ -48,7 +48,7 @@ import { RouterActive } from './router-active';
 export class App {
   loading = false;
   name = 'ng2 Address book';
-  url = 'https://github.com/marcusasplund/addressbook/'
+  url = 'https://github.com/marcusasplund/addressbook/';
 
   constructor() {}
 
