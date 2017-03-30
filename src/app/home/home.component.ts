@@ -122,7 +122,7 @@ export class Home {
     this.resetAddress();
   }
 
-  searchAll(q){
+  searchAll(q) {
     this.store.dispatch({
       type: 'SEARCH',
       payload: q
