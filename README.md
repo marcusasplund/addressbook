@@ -5,6 +5,8 @@
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/marcusasplund/addressbook)
 # [DEMO](https://pap.as/addressbook/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/marcusasplund/addressbook.svg)](https://greenkeeper.io/)
+
 ### Features
 CRUD address book that use browsers `localStorage` for persistent storage.
 * In "Add/Edit"-view the user can add new or edit old entries 
