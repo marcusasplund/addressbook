@@ -71,7 +71,7 @@
     "@angular2-material/progress-bar"   : "2.0.0-alpha.8-2",
     "@angular2-material/progress-circle": "2.0.0-alpha.8-2",
     "@angular2-material/radio"          : "2.0.0-alpha.8-2",
-    "@angular2-material/sidenav"        : "2.0.0-alpha.8-2",
+    "@angular2-material/sidenav"        : "2.0.0-alpha.8-3",
     "@angular2-material/toolbar"        : "2.0.0-alpha.8-2",
     "@ngrx/store"                       : "^2.2.1",
     "core-js"                           : "^2.2.2",
