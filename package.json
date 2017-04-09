@@ -61,7 +61,7 @@
     "@angular/platform-server"          : "4.0.1",
     "@angular/router"                   : "4.0.1",
     "@angular/router-deprecated"        : "2.0.0-rc.2",
-    "@angular2-material/button"         : "2.0.0-alpha.8-2",
+    "@angular2-material/button"         : "2.0.0-alpha.8-3",
     "@angular2-material/card"           : "2.0.0-alpha.8-2",
     "@angular2-material/checkbox"       : "2.0.0-alpha.8-2",
     "@angular2-material/core"           : "2.0.0-alpha.8-2",
