@@ -52,7 +52,7 @@
     "postversion"       : "git push && git push --tags"
   },
   "dependencies"   : {
-    "@angular/common"                   : "4.0.1",
+    "@angular/common"                   : "4.0.2",
     "@angular/compiler"                 : "4.0.1",
     "@angular/core"                     : "4.0.1",
     "@angular/http"                     : "4.0.1",
