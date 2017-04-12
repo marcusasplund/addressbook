@@ -54,7 +54,7 @@
   "dependencies"   : {
     "@angular/common"                   : "4.0.1",
     "@angular/compiler"                 : "4.0.1",
-    "@angular/core"                     : "4.0.1",
+    "@angular/core"                     : "4.0.2",
     "@angular/http"                     : "4.0.1",
     "@angular/platform-browser"         : "4.0.1",
     "@angular/platform-browser-dynamic" : "4.0.1",
