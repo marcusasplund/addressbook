@@ -3,7 +3,7 @@
 [![Build status](https://travis-ci.org/marcusasplund/addressbook.svg?branch=master)](https://travis-ci.org/marcusasplund/addressbook)
 [![dependencies](https://david-dm.org/marcusasplund/addressbook.svg)](https://david-dm.org/marcusasplund/addressbook)
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/marcusasplund/addressbook)
-[![Greenkeeper badge](https://badges.greenkeeper.io/marcusasplund/addressbook.svg)](https://greenkeeper.io/)
+
 # [demo](https://pap.as/addressbook/)
 
 ### Features
