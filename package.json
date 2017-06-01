@@ -117,7 +117,7 @@
     "style-loader"                : "^0.18.0",
     "ts-helpers"                  : "1.1.2",
     "ts-node"                     : "^3.0.2",
-    "tslint"                      : "^5.0.0",
+    "tslint"                      : "^5.4.2",
     "tslint-loader"               : "^3.4.3",
     "typedoc"                     : "^0.7.0",
     "typescript"                  : "~2.3.1",
