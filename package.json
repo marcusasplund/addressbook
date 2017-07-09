@@ -73,7 +73,7 @@
     "@angular2-material/radio"          : "^2.0.0-alpha.8-3",
     "@angular2-material/sidenav"        : "^2.0.0-alpha.8-3",
     "@angular2-material/toolbar"        : "^2.0.0-alpha.8-3",
-    "@ngrx/store"                       : "^2.2.1",
+    "@ngrx/store"                       : "2.2.2",
     "core-js"                           : "^2.2.2",
     "normalize.css"                     : "^7.0.0",
     "rxjs"                              : "^5.4.0",
