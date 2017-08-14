@@ -108,7 +108,7 @@
     "karma-webpack"               : "2.0.3",
     "parse5"                      : "^3.0.2",
     "phantomjs-polyfill"          : "0.0.2",
-    "phantomjs-prebuilt"          : "^2.1.7",
+    "phantomjs-prebuilt"          : "^2.1.15",
     "protractor"                  : "^5.1.1",
     "raw-loader"                  : "0.5.1",
     "remap-istanbul"              : "^0.9.5",
